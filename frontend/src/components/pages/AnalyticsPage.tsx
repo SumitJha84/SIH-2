@@ -1,7 +1,7 @@
 import React from 'react';
 import DynamicYieldForecast from '../AnalyticsPage/DynamicYieldForecast';
 import WhatIfScenarioPlanner from '../AnalyticsPage/WhatIfScenarioPlanner';
-import PerformanceBenchmarking from '../AnalyticsPage/PerformanceBenchmarking';
+import PerformanceBenchmarking from '../AnalyticsPage/PerformanceBenchmarking.tsx';
 
 const AnalyticsPage: React.FC = () => {
   return (
