@@ -1,0 +1,396 @@
+/* Main Container */
+.forecast-container {
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E5E7EB;
+}
+
+/* Header Section */
+.forecast-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #F3F4F6;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.forecast-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.forecast-subtitle {
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.forecast-controls {
+  display: flex;
+  align-items: center;
+}
+
+.forecast-time-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 2px solid #D1D5DB;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.forecast-time-select:hover {
+  border-color: #10B981;
+}
+
+.forecast-time-select:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Summary Cards */
+.forecast-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.forecast-current-yield {
+  background-color: #F0FDF4;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 2px solid #BBF7D0;
+}
+
+.yield-icon {
+  font-size: 32px;
+  background-color: #059669;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%) brightness(0) invert(1);
+}
+
+.yield-content {
+  flex: 1;
+}
+
+.yield-value {
+  font-size: 32px;
+  font-weight: 800;
+  color: #059669;
+  margin: 0 0 4px 0;
+  line-height: 1;
+}
+
+.yield-unit {
+  font-size: 14px;
+  color: #065F46;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.forecast-trend {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.forecast-trend.positive {
+  color: #059669;
+}
+
+.forecast-trend.negative {
+  color: #DC2626;
+}
+
+.forecast-confidence {
+  background-color: #FEF3C7;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 2px solid #FDE68A;
+}
+
+.confidence-icon {
+  font-size: 32px;
+  background-color: #D97706;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%) brightness(0) invert(1);
+}
+
+.confidence-content {
+  flex: 1;
+}
+
+.confidence-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #92400E;
+  margin: 0 0 8px 0;
+}
+
+.confidence-range {
+  font-size: 18px;
+  font-weight: 600;
+  color: #D97706;
+  margin: 0 0 12px 0;
+}
+
+.confidence-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #FED7AA;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.confidence-bar-fill {
+  width: 85%;
+  height: 100%;
+  background-color: #EA580C;
+  border-radius: 4px;
+}
+
+/* Graph Section */
+.forecast-graph-container {
+  margin-bottom: 32px;
+}
+
+.graph-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 20px 0;
+}
+
+.forecast-graph {
+  background-color: #FAFAFA;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #E5E7EB;
+  margin-bottom: 16px;
+}
+
+.graph-svg {
+  width: 100%;
+  height: 300px;
+}
+
+.axis-label {
+  font-size: 12px;
+  fill: #6B7280;
+  font-weight: 500;
+}
+
+.event-marker {
+  font-size: 12px;
+  fill: white;
+  font-weight: bold;
+}
+
+/* Graph Legend */
+.graph-legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-line {
+  width: 20px;
+  height: 4px;
+  background-color: #10B981;
+  border-radius: 2px;
+}
+
+.legend-area {
+  width: 20px;
+  height: 12px;
+  background: linear-gradient(to bottom, rgba(16, 185, 129, 0.3), rgba(16, 185, 129, 0.1));
+  border-radius: 2px;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #059669;
+  border-radius: 50%;
+}
+
+.legend-text {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Events Section */
+.forecast-events {
+  background-color: #F9FAFB;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #E5E7EB;
+}
+
+.events-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 16px 0;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.event-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #E5E7EB;
+  transition: all 0.2s ease;
+}
+
+.event-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.event-icon-container {
+  background-color: #F3F4F6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-icon {
+  font-size: 18px;
+}
+
+.event-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.event-description {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.event-date {
+  font-size: 12px;
+  color: #6B7280;
+}
+
+.event-impact {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.impact-label {
+  font-size: 12px;
+  color: #6B7280;
+}
+
+.impact-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: #059669;
+  background-color: #DCFCE7;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .forecast-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .forecast-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .forecast-current-yield,
+  .forecast-confidence {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .graph-legend {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .event-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast-container {
+    padding: 16px;
+  }
+  
+  .yield-value {
+    font-size: 24px;
+  }
+  
+  .forecast-title {
+    font-size: 20px;
+  }
+}

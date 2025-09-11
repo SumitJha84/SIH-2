@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Dashboard from './components/pages/Dashboard';
 import FarmManagement from './components/pages/FarmManagement';
-// import Analytics from './components/Analytics';
+import Analytics from './components/pages/AnalyticsPage';
 // import MarketPrices from './components/MarketPrices';
 // import Weather from './components/Weather';
 // import Settings from './components/Settings';
@@ -18,8 +18,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/farm-management" element={<FarmManagement />} />
-            {/* <Route path="/analytics" element={<Analytics />} />
-            <Route path="/market-prices" element={<MarketPrices />} />
+            <Route path="/analytics" element={<Analytics />} />
+            {/* <Route path="/market-prices" element={<MarketPrices />} />
             <Route path="/weather" element={<Weather />} />
             <Route path="/settings" element={<Settings />} /> */}
           </Routes>
