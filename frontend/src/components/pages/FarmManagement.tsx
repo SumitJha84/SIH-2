@@ -52,7 +52,8 @@ const FarmManagement: React.FC = () => {
     coordinates: [],
     cropType: '',
     seedVariety: '',
-    plantingDate: ''
+    plantingDate: '',
+    name: '' // ADDED: Include name field
   });
   const [wizardStep, setWizardStep] = useState(1);
   const [isDrawing, setIsDrawing] = useState(false);
@@ -103,7 +104,7 @@ const FarmManagement: React.FC = () => {
     const area = calculateArea(currentPlot.coordinates);
     const newPlot: Plot = {
       id: Date.now().toString(),
-      name: `Plot ${plots.length + 1}`,
+      name: currentPlot.name || `Plot ${plots.length + 1}`, // CHANGED: Use entered name or auto-generate
       coordinates: currentPlot.coordinates,
       area: Math.round(area),
       cropType: currentPlot.cropType || '',
@@ -111,7 +112,13 @@ const FarmManagement: React.FC = () => {
       plantingDate: currentPlot.plantingDate || ''
     };
     setPlots([...plots, newPlot]);
-    setCurrentPlot({ coordinates: [], cropType: '', seedVariety: '', plantingDate: '' });
+    setCurrentPlot({ 
+      coordinates: [], 
+      cropType: '', 
+      seedVariety: '', 
+      plantingDate: '',
+      name: '' // ADDED: Reset name field
+    });
     setIsDrawing(false);
     setWizardStep(1);
   };
